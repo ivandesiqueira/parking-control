@@ -2,7 +2,6 @@ package com.api.parkingcontrol.models;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.Objects;
 import java.util.UUID;
 
 import javax.persistence.Column;
@@ -149,23 +148,6 @@ public class ParkingSpotModel implements Serializable {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		ParkingSpotModel other = (ParkingSpotModel) obj;
-		return Objects.equals(id, other.id);
 	}
 
 }
